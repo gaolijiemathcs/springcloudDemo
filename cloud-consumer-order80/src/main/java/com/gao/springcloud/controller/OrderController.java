@@ -15,8 +15,11 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class OrderController {
+    // 单机版的时候 按照端口号写死 当微服务化的时候按照服务名称去找
+//    public static final String PAYMENT_URL = "http://localhost:8001";
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    // 集群 是通过eureka上注册过的微服务名称去调用
+    public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     @Resource
     private RestTemplate restTemplate;
