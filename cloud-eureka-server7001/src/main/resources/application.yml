@@ -11,8 +11,8 @@ eureka:
     fetch-registry: false
     service-url:
       # 单机版本
-      defaultZone: http://eureka7001.com:7001/eureka/
-#      defaultZone: http://eureka7002.com:7002/eureka/   # 相互注册 相互守望 集群需要能够找到7002的机子
+#      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://eureka7002.com:7002/eureka/   # 相互注册 相互守望 集群需要能够找到7002的机子
   server:
     # 关闭自我保护机制 保证不可用服务及时被剔除
     enable-self-preservation: false
